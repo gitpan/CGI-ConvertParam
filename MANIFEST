@@ -1,4 +1,5 @@
 Changes
+MANIFEST
 ConvertParam.pm
 ConvertParam/EUC.pm
 ConvertParam/JIS.pm
@@ -13,7 +14,6 @@ ConvertParam/OnsetJIS.pm
 ConvertParam/OnsetShiftJIS.pm
 ConvertParam/OnsetUTF8.pm
 Makefile.PL
-MANIFEST
 test.pl
-README
 doc/README_ja.pod
+README

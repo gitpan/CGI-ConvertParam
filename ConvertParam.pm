@@ -4,7 +4,7 @@ require 5.00;
 use vars qw($VERSION $AUTOLOAD);
 use strict;
 
-$VERSION = '0.04';
+$VERSION = '0.05';
 
 sub new
 {

@@ -26,3 +26,11 @@ Revision history for Perl extension CGI::ConvertParam.
 	- added CGI::ConvertParam::OnsetJIS sub-class
 	- added CGI::ConvertParam::OnsetUTF8 sub-class
 
+0.05 Thu Apr 26 10:48:48 JST 2001
+	- fixup Since 'carriage returns' was included at the end of the
+	  sentence of 'Makefile.PL', 'MANIFEST', 'Changes' and 'README',
+	  it was deleted. Only environment older than perl version5.005
+      was influenced.
+	  (See also perl5005delta.pod/'More generous treatment of
+	   carriage return')
+	  thanks to NAKAGAWA ( Pipe Smoker ) Tsuneo.

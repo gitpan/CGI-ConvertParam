@@ -1,0 +1,10 @@
+Changes
+ConvertParam.pm
+ConvertParam/EUC.pm
+ConvertParam/OngetUTF8.pm
+ConvertParam/OnsetShiftJIS.pm
+Makefile.PL
+MANIFEST
+test.pl
+README
+doc/README.ja.pod

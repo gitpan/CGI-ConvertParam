@@ -1,0 +1,14 @@
+Revision history for Perl extension CGI::ConvertParam.
+
+0.01  Fri Sep 22 11:20:29 JST 2000
+	- original version; created by h2xs 1.20 with options
+		-X -n CGI::ConvertParam
+
+0.02  Mon Sep 18 16:51:07 JST 2000
+	- changed new() method behavior
+	- added convert_on_set() method
+	- added convert_on_get() method
+	- added convert_all_param() method
+
+0.03  Fri Sep 22 20:07:34 JST 2000
+	- added initialize() method

@@ -4,7 +4,7 @@ require 5.00;
 use vars qw($VERSION $AUTOLOAD);
 use strict;
 
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 sub new
 {
@@ -20,9 +20,11 @@ sub new
 sub AUTOLOAD
 {
     my $self = shift;
+    return if $AUTOLOAD =~ /::DESTROY$/;
     my $method = $AUTOLOAD;
     $method =~ s/.*://;
-    $self->query->$method;
+
+    $self->query->$method(@_);
 }
 
 
@@ -92,12 +94,13 @@ sub do_convert_on_set
     return $parameter_value;
 }
 
+
 1;
 __END__
 
 =head1 NAME
 
-CGI::ConvertParam - Several hock to the CGI::param() method.
+CGI::ConvertParam - Decorator class which adds several hook to CGI::param().
 
 =head1 SYNOPSIS
 
@@ -122,11 +125,11 @@ CGI::ConvertParam - Several hock to the CGI::param() method.
 
 =head1 DESCRIPTION
 
-CGI::ConvertParam is adds several hock to the CGI::param() method with Decorator pattern.
+CGI::ConvertParam and the subclass are Decorator which adds some hooks to the CGI::param() method.
 
 =head1 EXAMPLE
 
-=head2 All parameter convert to EUC-JP
+=head2 All parameters are converted to EUC-JP
 
   package CGI::ConvertParam::EUC;
   use base 'CGI::ConvertParam';
@@ -230,7 +233,7 @@ This method is colled by the inherited new() constructor method. The B<initializ
 
 =item do_convert_on_set()
 
-This method is called by B<param('name' =&gt; $value)> method. The B<do_convert_on_set()> method shuld be used to define the converter.
+This method is called by B<param('name' =E<gt> $value)> method. The B<do_convert_on_set()> method shuld be used to define the converter.
 
 =item do_convert_on_get()
 

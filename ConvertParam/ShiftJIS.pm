@@ -1,4 +1,4 @@
-package CGI::ConvertParam::EUC;
+package CGI::ConvertParam::ShiftJIS;
 use base 'CGI::ConvertParam';
 use Jcode;
 use strict;
@@ -14,7 +14,7 @@ sub do_convert_all_param
 {
     my $self    = shift;
     my $strings = shift;
-    return Jcode->new($strings)->h2z->euc;
+    return Jcode->new($strings)->sjis;
 }
 
 1;

@@ -12,3 +12,17 @@ Revision history for Perl extension CGI::ConvertParam.
 
 0.03  Fri Sep 22 20:07:34 JST 2000
 	- added initialize() method
+
+0.04  Mon Oct 16 16:01:46 JST 2000
+	- fixup Problem which AUTOLOAD() does not correctly forward.
+	- changed AUTOLOAD() method. DESTROY() is not forwarded.
+	- added CGI::ConvertParam::JIS sub-class
+	- added CGI::ConvertParam::ShiftJIS sub-class
+	- added CGI::ConvertParam::UTF8 sub-class
+	- added CGI::ConvertParam::OngetEUC sub-class
+	- added CGI::ConvertParam::OngetJIS sub-class
+	- added CGI::ConvertParam::OngetShiftJIS sub-class
+	- added CGI::ConvertParam::OnsetEUC sub-class
+	- added CGI::ConvertParam::OnsetJIS sub-class
+	- added CGI::ConvertParam::OnsetUTF8 sub-class
+
